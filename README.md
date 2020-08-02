@@ -30,34 +30,38 @@ or
         cd maelstrom
         python setup.py install
 
-
+## Run `make` to obtain the results for this project. This produces a `report.pdf` file as well as multiple figures.
 
 # What is Maelstrom used for ? 
-### *Maelstrom* is a package that was created by Daniel Hey (DOI: https://joss.theoj.org/papers/10.21105/joss.02125) for modelling and analyzing binary light curves. When a star that begins pulsating when in orbit with another astronomical object, the time taken for these pulsations to reach us changes as a function of time. Understanding the phase of the these pulsations can be used to obtain information about the star throughout the orbit. This is know as *Phase Modulation*.
+### *Maelstrom* is a package that was created by Daniel Hey (DOI: https://joss.theoj.org/papers/10.21105/joss.02125) for modelling and analyzing binary light curves. When a star that begins pulsating when in orbit with another astronomical object, the time taken for these pulsations to reach us changes as a function of time. Understanding the phase of these pulsations can be used to obtain information about the star throughout the orbit. This method is know as *Phase Modulation*.
 
-### *Maelstrom* uses a set of custom PyMC3 Modelsand solvers for modelling binary orbits through phase modulation. Unlike previous methods, *Maelstrom* fits each individual datapoint in the time series by forward modelling the time delay onto the light curve.
+### *Maelstrom* uses a set of custom PyMC3 Models and solvers for modelling binary star orbits through phase modulation. Unlike previous methods, *Maelstrom* fits each individual datapoint in the time series by forward modelling the time delay onto the light curve.
 
-### Data used in Maelstrom can be obtained for free to the public for *Kepler* and *TESS* missions. This data is available online at https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html. However this data can be downloaded using the Python package *lightkurve*, for this project this data can be downloaded using the Python file LK.py.
+### Data used in Maelstrom can be obtained online at https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html. However this data can be downloaded using the Python package *lightkurve*. For this project the python filev`LK.py` extracts the light curve data by means of the *lightkurve* module.
 
-# How do I use Maelstrom?
+# How to use Maelstrom?
+
 ### First to start a project with *Maelstrom* a light curve must be downloaded, and to do this as mentioned previously all you need to do is run the file 
         LK.py
-### the default lightcurve is set to data from "KIC 8264492". But if you wish to change this to another mission all you need to do is change the 
+### the default light curve for this project is set to data from "KIC 8264492" (Note: KIC = Kepler Input Catalogue). But if you wish to change this to another mission all you need to do is change the 
         input 
 ### in
         LK.py
-### to another mission. For example, if you are interested in the binary star system KIC 9651065, then you would change 
+### to another light curve. For example, if you are interested in the binary star system KIC 9651065, then you would change 
         input = "KIC 9651065"
         mission = "Kepler"
-### and then run the file. Of course you can also just run `make` as mentioned previously.
+in 
 
-### NOTE: When changing the `input`, some of the parameter in the other files, `Maelstrom_Frequency.py`  and `Recover_Planet.py` you may also need to change `fmin` and `fmax` in `Maelstrom_Frequency.py` and period range in `Recover_Planet.py`. 
+        LK.py
+### and then run the file.
 
-### Now we can begin by analysing lightcurves
+### NOTE: When changing the `input`, some of the parameters in the other python files, `Maelstrom_Frequency.py`  and `Recover_Planet.py` may also need to change. Those parameters being "`fmin`" and "`fmax`" in `Maelstrom_Frequency.py` and "`period` range" in `Recover_Planet.py`. 
 
-### In this project we are focusing on understanding how the brightness (or flux) changes with time in binary star systems. First a pixel image of the star is created using the `lightkurve` module in the python file `Recover_Planet.py`
+## Analyzing light curve data
 
-### The python file `Maelstrom_Frequency.py` output plots of first inital  plots which are; i) the light curve ii) the amplitude spectrum iii) the extracted time delays, and iv) the periodogram of the time delays. As well as the same plots after modelling the data are also given. The figures made from running this file with automatically save the plots as `pdf` files with the appropriate name. `Maelstrom_Frequency.py` also prints the orbital period for the star and the oscillation modes associated with the data.
+### In this project we are focusing on understanding how the brightness (or flux) changes with time in binary star systems and what information we can obtain from this. First a pixel image of the star is created using the `lightkurve` module in the python file `Recover_Planet.py`
+
+### The python file `Maelstrom_Frequency.py` output initial plots of  i) the light curve ii) the amplitude spectrum iii) the extracted time delays, and iv) the periodogram of the time delays. This python file also uses a forward modelling routine as part of the `Maelstrom` package for light curve. The results (plots) of the forward modelling is saved as `pdf` files with the appropriate name. `Maelstrom_Frequency.py` also prints the orbital period for the star and its oscillation modes.
 
  # Summary
- ### The python file `LK.py` finds a light curve for a star in binary. `Recover_Planet.py` outputs a pixel image of the star. The python file `Maelstrom_Frequency.py` produces inital plots based on the lightcurve. As well this file with model the light curve data and produce plots.
+ ### The python file `LK.py` finds a light curve for a star in binary. `Recover_Planet.py` outputs a pixel image of the star. The python file `Maelstrom_Frequency.py` produces inital plots based on the lightcurve and models the data by means of forward modelling and produces results in the form of plots.
