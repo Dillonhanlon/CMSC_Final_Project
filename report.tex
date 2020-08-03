@@ -1,0 +1,55 @@
+\documentclass[]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{float}
+
+
+\title{Maelstrom}
+\author{Dillon Hanlon}
+\date{\today}
+
+\begin{document}
+
+
+\maketitle
+\section{Introduction}
+People think of stars as this lonely dot in space that provide light, but
+many stars that are in space are actually in a binary system. In fact, binary and even multiple system stars are much more common than single stars by at least a factor of two \cite{guszejnov2017protostellar}. Binary systems however, one or both components can pulsate, meaning that their brightness changes as a function of time. Those that pulsate with some periodicity can provide researchers with a \textit{clock} also known as a standard candle and help aid their measurements  \cite{murphy2018finding}. Typically the type of stars that appear in these systems are type A to type F main sequence stars \cite{garg2010high}.
+
+Light curves are very useful plots of light intensity (brightness) as a function of time for stars or other astronomical objects for understanding more about that object. The light curve shapes of pulsating stars in a binary systems can give valuable information about the underlying physical processes producing the changes in the brightness (flux). As well, the shape of the light curve can indicate the relative sizes of the stars, relative surface brightness \cite{russell1912determination}. It should be noted that most work in science has many contributions from many different experiments, therefore for astronomical research understanding light curves use information from many observations to get the full details of the object.
+
+\section{Method}
+This project focused on using \textit{Maelstrom}, an open source python package that models and analyzes binary light curves with a pulsating component. For this project the celestial object in study is KIC 8264492, a binary star system with a $\delta$ Sct star component located in the field of the open cluster NGC 6866, 3900 light years away, with a mass of 1.87 $M_{\odot}$ and a temperature of $T_{eff} = 7992$K \cite{balona2013pulsation,shibahashi2015fm}.
+
+This project focused on using \textit{Maelstrom}, an open source python package that models and analyzes binary light curves with a pulsating component. For this project the celestial object in study is KIC 8264492, a binary star system with a $\delta$ Scuti star component located in the field of the open cluster NGC 6866, 3900 light years away, with a mass of 1.87 $M_{\odot}$ and a temperature of $T_{eff} = 7992$K \cite{balona2013pulsation,shibahashi2015fm}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Recover_Binary.pdf}
+      \caption{Need new caption}
+      \label{fig:Recover_Binary}
+    \end{figure}
+
+
+A python module \textit{lightkurve} was used initially to get a pixel image of the pulsating star.  As can be seen from Fig \ref{fig:Recover_Binary} there is an intense region near the center of this image with flux on the order of$\sim$ 10$^4 electrons/second$ which represents the star of interest. \textit{Maelstrom} will forward model the orbit where a light curve is generated from the orbital parameters. The light curve for the binary star used in this project can be seen in Fig \ref{fig:Lightcurve}. The module \textit{lightkurve} subtracts 2454844 days which is the Kepler zero time from the time data. Therefore all times are reported in Barycentric Kepler Julian Date (BKJD), doing this corrects for differences in the earths position with respect to the center of our solar system \cite{Eastman_2010}. This light curve data will then be used in \textit{Maelstrom} to produce information about the star.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Lightcurve.pdf}
+      \caption{Need new caption}
+      \label{fig:Lightcurve}
+    \end{figure}
+
+
+\section{Results}
+
+
+
+
+\section{Conclusion}
+
+
+\bibliography{bibliography}        
+\bibliographystyle{unsrt}
+
+\end{document}
