@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from math import pi
 
-from Maelstrom_Frequency import opt
+from Maelstrom_lightcurve import opt
 eccen = np.mean(opt['eccen'])
 a = np.mean(opt['lighttime'])
 b = a / 2
@@ -20,5 +20,4 @@ ax.axes.xaxis.set_visible(False)
 ax.axes.yaxis.set_visible(False)
 ax.axhline(c='grey',linestyle = '--', lw=1)
 
-plt.savefig('orbit.pdf')
-plt.show()
+plt.savefig('orbit.png')
