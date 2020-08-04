@@ -4,7 +4,7 @@
 \usepackage{float}
 
 
-\title{Maelstrom}
+\title{Using \textit{Maelstrom} to obtain orbital information about KIC 8264492 }
 \author{Dillon Hanlon}
 \date{\today}
 
@@ -17,7 +17,7 @@
 \end{abstract}
 \section{Introduction}
 People think of stars as this lonely dot in space that provide light, but
-many stars that are in space are actually in a binary system. In fact, binary and even multiple system stars are much more common than single stars by at least a factor of two \cite{guszejnov2017protostellar}. Binary systems however, one or both components can pulsate, meaning that their brightness changes as a function of time. Those that pulsate with some periodicity can provide researchers with a \textit{clock} also known as a standard candle and help aid their measurements  \cite{murphy2018finding}. Typically the type of stars that appear in these systems are type A to type F main sequence stars \cite{garg2010high}.
+many stars that are in space are actually in a binary system. In fact, binary and even multiple system stars are much more common than single stars by at least a factor of two \cite{guszejnov2017protostellar}. Binary systems however, one or both components can pulsate, meaning that their brightness changes as a function of time. Those that pulsate with some periodicity can provide researchers with a clock also known as a standard candle and help aid their measurements  \cite{murphy2018finding}. Typically the type of stars that appear in these systems are type A to type F main sequence stars \cite{garg2010high}.
 
 Light curves are very useful plots of light intensity (brightness) as a function of time for stars or other astronomical objects for understanding more about that object. The light curve shapes of pulsating stars in a binary systems can give valuable information about the underlying physical processes producing the changes in the brightness (flux). As well, the shape of the light curve can indicate the relative sizes of the stars, relative surface brightness \cite{russell1912determination}. It should be noted that most work in science has many contributions from many different experiments, therefore for astronomical research understanding light curves use information from many observations to get the full details of the object.
 
@@ -71,15 +71,25 @@ The optimized parameters are shown in Table
 \end{tabular}
 
 \noindent
-From these parameters it is possible to make an estimate of the shape of the elliptical orbit for this star.
-%Add a plot of the ellipse ?
-It is also possible to extract the theoretical light curve from the time delay signal which is shown in Fig \ref{fig:LightcurveOptimized}
+From these parameters it is possible to make an estimate of the shape of the elliptical orbit for this star. Knowing that the semi-minor axis is related to the semi-major axis by a factor of $1/2$, then it is possible to make a simplistic model of the orbit as shown in Fig \ref{fig:Orbit}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{orbit.pdf}
+      \caption{Need new caption}
+      \label{fig:Orbit}
+\end{figure}
+Also in this figure is an estimate of where the center of mass for the two planets would occur, labelled in the red circle. Since the orbital parameters of the other star in binary is unknown, it is not possible to make a schematic of that orbit.
+
+It is also possible to extract the theoretical light curve from the time delay signal which is shown in Fig \ref{fig:LightcurveOptimized}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{lightcurve_opt.pdf}
       \caption{Need new caption}
       \label{fig:LightcurveOptimized}
 \end{figure}
+
+It is evident in Fig \ref{fig:LightcurveOptimized} that the original light curve data (black points) agrees really well with the theoretical fit obtained by forward modelling the light curve. Although we can derive this from the time delay signal, this does not provide any further information than the previous light curve signal other than it shows a good correlation with the light curve meaning the model worked
 
 \section{Conclusion}
 
