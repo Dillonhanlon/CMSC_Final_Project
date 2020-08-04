@@ -1,6 +1,12 @@
 import numpy as np
+import matplotlib as mpl
 from matplotlib import pyplot as plt
 from math import pi
+
+from matplotlib import rcParams
+mpl.rcParams['axes.linewidth'] = 1.2
+rcParams["figure.dpi"] = 150
+rcParams["savefig.dpi"] = 150
 
 from Maelstrom_lightcurve import opt
 eccen = np.mean(opt['eccen'])
