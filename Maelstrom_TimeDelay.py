@@ -1,6 +1,7 @@
 import numpy as np
 import corner
 import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import exoplanet as xo
 import pymc3 as pm
@@ -10,6 +11,7 @@ import maelstrom as ms
 from maelstrom import Maelstrom
 
 from matplotlib import rcParams
+mpl.rcParams['axes.linewidth'] = 1.2
 rcParams["figure.dpi"] = 150
 rcParams["savefig.dpi"] = 150
 
