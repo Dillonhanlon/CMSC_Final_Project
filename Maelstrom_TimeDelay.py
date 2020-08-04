@@ -36,9 +36,8 @@ with ms:
     model_td = xo.eval_in_model(ms.tau, opt) * 86400
     plt.plot(ms.time, model_td - np.median(model_td), c='blue', linewidth=0.5)
     plt.plot(td_time, td_average, '.k')
-    plt.savefig('time_delay.pdf')
+    plt.savefig('time_delay.png')
     
 plt.xlabel('Time [day]')
 plt.ylabel('Time delay [s]')
 
-plt.show()
