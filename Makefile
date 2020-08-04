@@ -1,8 +1,8 @@
 report.pdf: report.tex Recover_Binary.png orbit.png lightcurve_opt.png time_delay.png bibliography.bib
 	latexmk -pdf
 
-Recover_Binary.png: Recover_Planet.py LK
-	python3 Recover_Planet.py
+Recover_Binary.png: Recover_Binary.py LK
+	python3 Recover_Binary.py
 
 time_delay.png: Maelstrom_TimeDelay.py LK
 	python3 Maelstrom_TimeDelay.py
