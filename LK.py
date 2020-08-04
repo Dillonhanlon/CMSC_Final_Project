@@ -14,6 +14,6 @@ LC = lk.search_lightcurvefile(input, mission=mission).download_all().PDCSAP_FLUX
 tpf = lk.search_targetpixelfile(input).download()
 
 LC.plot()
-plt.savefig('Lightcurve.pdf')
+plt.savefig('Lightcurve.png')
 
 
