@@ -6,7 +6,4 @@ from LK import tpf
 from LK import label
 
 tpf.plot(frame=100, scale='log', show_colorbar=True)
-plt.savefig('Recover_Binary.pdf')
-
-
-plt.show()
+plt.savefig('Recover_Binary.png')
