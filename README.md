@@ -9,30 +9,35 @@
         vi)     numpy
         vii)    matplotlib
         viii)   corner
+        ix)     theano
 
 
-### To download these modules using conda you can use the following format 
-        conda install exoplanet
-        conda install pymc3
-        conda install astropy
-        conda install lightkurve
-        conda install pandas
-        conda install numpy
-        conda install matplotlib
-        conda install corner
+### To download these modules either using conda or pip you can use the following format 
+        pip(3) install exoplanet
+        pip(3) install pymc3
+        pip(3) install astropy
+        pip(3) install lightkurve
+        pip(3) install pandas
+        pip(3) install numpy
+        pip(3) install matplotlib
+        pip(3) install corner
+        pip(3) install theano
 
 or 
 
         conda install exoplanet pymc3 astropy lightkurve etc. 
 
-### Installing from the source
+### Install Maelstrom from the source
         git clone --recursive https://github.com/danhey/maelstrom.git
         cd maelstrom
         python setup.py install
 
 ## Run `make` to obtain the results for this project. This produces a `report.pdf` file as well as multiple figures.
 
+## Note: when running `make` you may encounter some warnings, these are due to one of the modules (astropy) updating its code which Maelstrom calls uses. The program still runs normally.
+
 # What is Maelstrom used for ? 
+
 ### *Maelstrom* is a package that was created by Daniel Hey (DOI: https://joss.theoj.org/papers/10.21105/joss.02125) for modelling and analyzing binary light curves. When a star that begins pulsating when in orbit with another astronomical object, the time taken for these pulsations to reach us changes as a function of time. Understanding the phase of these pulsations can be used to obtain information about the star throughout the orbit. This method is know as *Phase Modulation*.
 
 ### *Maelstrom* uses a set of custom PyMC3 Models and solvers for modelling binary star orbits through phase modulation. Unlike previous methods, *Maelstrom* fits each individual datapoint in the time series by forward modelling the time delay onto the light curve.
