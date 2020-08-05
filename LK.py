@@ -20,7 +20,9 @@ tpf = lk.search_targetpixelfile(input).download()
 plt.figure(figsize = (8,8))
 
 LC.plot()
-plt.title('Normalized Flux vs Time [BKJD days]')
+plt.ylabel('Normalized Flux',fontsize = 16)
+plt.xlabel('Time - 2454833 [BKJD day]',fontsize = 16)
+plt.title('Normalized Flux vs Time [BKJD days]',fontsize = 16)
 plt.savefig('Lightcurve.png')
 
 
