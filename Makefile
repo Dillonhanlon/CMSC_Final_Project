@@ -1,23 +1,26 @@
-report.pdf: report.tex Recover_Binary.png orbit.png lightcurve_opt.png time_delay.png bibliography.bib
+report.pdf: report.tex output bibliography.bib
 	latexmk -pdf
 
-Recover_Binary.png: Recover_Binary.py LK
-	python3 Recover_Binary.py
 
-time_delay.png: Maelstrom_TimeDelay.py LK
-	python3 Maelstrom_TimeDelay.py
+output: project.sh
+	bash project.sh
+# Recover_Binary.png: Recover_Binary.py LK
+# 	python3 Recover_Binary.py
 
-lightcurve_opt.png: Maelstrom_lightcurve.py LK
-	python3 Maelstrom_lightcurve.py
+# time_delay.png: Maelstrom_TimeDelay.py LK
+# 	python3 Maelstrom_TimeDelay.py
 
-orbit.png: orbit.py LK
-	python3 orbit.py
+# lightcurve_opt.png: Maelstrom_lightcurve.py LK
+# 	python3 Maelstrom_lightcurve.py
 
-Lightcurve.png: LK
-	python3	LK.py
+# orbit.png: orbit.py LK
+# 	python3 orbit.py
 
-LK: LK.py
-	python3 LK.py
+# Lightcurve.png: LK
+# 	python3	LK.py
+
+# LK: LK.py
+# 	python3 LK.py
 
 .PHONY: clean almost_clean
 
