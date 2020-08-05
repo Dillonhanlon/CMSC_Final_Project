@@ -39,9 +39,10 @@ with ms:
     plt.plot(ms.time, ms.flux, '.k', label='Data')
     plt.xlim(200,205)
     plt.ylim(-6,6)
+    plt.xlabel('Time [day]')
+    plt.ylabel('Flux [ppt]')
+    plt.title('Optimized Light Curve')
+    plt.legend()
     plt.savefig('lightcurve_opt.png')
-# plt.xlim(200,205)
-plt.xlabel('Time [day]')
-plt.ylabel('Flux [ppt]')
-plt.legend()
+
 
