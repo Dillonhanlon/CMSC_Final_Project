@@ -35,7 +35,7 @@
         cd maelstrom
         python setup.py install
 
-## Run `make` to obtain the results for this project. This produces a `report.pdf` file as well as multiple figures.
+## Run `make` to obtain the results for this project. This produces a `report.pdf` file as well as multiple figures. This workflow may take a few minutes to run. 
 
 ## Note: when running `make` you may encounter some warnings, these are due to one of the modules (astropy) updating its code which Maelstrom uses. This does not affect the project.
 
