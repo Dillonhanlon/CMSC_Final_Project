@@ -40,6 +40,7 @@ with ms:
     plt.plot(td_time, td_average, '.k', label = 'Original Data')
     plt.xlabel('Time [day]')
     plt.ylabel('Time delay [s]')
+    plt.title('Time Delay versus Time')
     plt.savefig('time_delay.png')
     
 
