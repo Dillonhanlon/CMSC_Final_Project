@@ -9,7 +9,7 @@ from LK import tpf
 from LK import label
 
 
-x = tpf.plot(frame=100, scale='log', show_colorbar=True,style = 'fast')
+tpf.plot(frame=100, scale='log', show_colorbar=True,style = 'fast')
 plt.title('KIC 8264492',fontsize = 14)
 
 plt.xlabel('Pixel Column Number [No Units]')
