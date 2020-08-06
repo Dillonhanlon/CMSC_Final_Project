@@ -73,5 +73,7 @@ in
 
 ### The python files `LK.py`, `orbit.py`, `Recover_Binary.py`, `Maelstrom_lightcurve.py`, and `Maelstrom_TimeDelay.py` produces all the results for this project. 
 
+### Note: `Lightkurve` has built in plotting tools that use matplotlib, therefore, the python files `LK.py` and `Recover_Binar.py` produces plots `lightcurve.png` and `Recover_Binary.png` which are made from the `lightkurve` module
+
  # Summary
  ### The python file `LK.py` finds a light curve and produces a figure for the brightness (flux) as a function of time for a star in binary. `Recover_Binary.py` outputs a pixel image of the star. The python files `Maelstrom_lightcurve.py`, and `Maelstrom_TimeDelay.py` produces iofthe lightcurve  deruved by forward modelling, as well produces a time delay versus time plot. Finally, `orbit.py` produces a very simplistic image of the estimated ellipse for the pulsating star with also the estimation of the barycenter for the binary system.
